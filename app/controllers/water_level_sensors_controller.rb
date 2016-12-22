@@ -1,0 +1,2 @@
+class WaterLevelSensorsController < ApplicationController
+end
