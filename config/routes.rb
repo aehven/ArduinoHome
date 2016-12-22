@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :homes
   resources :motion_sensors
   resources :water_level_sensors
   resources :sensors
