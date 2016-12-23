@@ -3,9 +3,9 @@ class CreateSensors < ActiveRecord::Migration[5.0]
     create_table :sensors do |t|
       t.actable
 
-      t.model_name :string
-      t.description :string
-      t.location :string
+      t.string :model_number
+      t.string :description
+      t.string :location
 
       t.timestamps
     end

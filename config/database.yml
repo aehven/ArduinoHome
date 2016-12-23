@@ -1,5 +1,7 @@
 default: &default
   adapter: mysql2
+  username: aehven
+  password: cypress
   pool: 5
   timeout: 5000
 
