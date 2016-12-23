@@ -1,0 +1,2 @@
+class GatewayMessagesController < ApplicationController
+end

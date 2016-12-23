@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  node_id: 1
+  child_sensor_id: 1
+  message_type: 1
+  ack: 
+  subtype: 1
+  payload: MyString
+
+two:
+  node_id: 1
+  child_sensor_id: 1
+  message_type: 1
+  ack: 
+  subtype: 1
+  payload: MyString
