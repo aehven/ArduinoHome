@@ -249,10 +249,10 @@ function tmuxinit {
   tmux new-window -t arduino:3 -n server
   tmux new-window -t arduino:4 -n shell
 
-  tmux send-keys -t arduino:1 "mysql -uaehven -pcypress arduino_home_development" C-m
-  tmux send-keys -t arduino:2 "cd $ARDUINO_HOME; rails c" C-m
-  tmux send-keys -t arduino:3 "cd $ARDUINO_HOME; rails s -b0.0.0.0" C-m
-  tmux send-keys -t arduino:4 "cd $ARDUINO_HOME" C-m
+  tmux send-keys -t arduino:1 "ard; go; mysql -uaehven -pcypress arduino_home_development" C-m
+  tmux send-keys -t arduino:2 "ard; go; rails c" C-m
+  tmux send-keys -t arduino:3 "ard; go; rails s -b0.0.0.0" C-m
+  tmux send-keys -t arduino:4 "ard; go" C-m
 
   tmux select-window -t arduino:3
   tmux attach-session -t arduino
