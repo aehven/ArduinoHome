@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function resource {
-  source $ARDUINO_HOME/setup/arduino.sh
+  source $ARDUINO_HOME/setup/ard.sh
 }
 
 function go {
