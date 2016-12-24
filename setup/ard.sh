@@ -66,7 +66,7 @@ function dbreset {
       ;;
     *)
       if [[ "$JUST_RESET" != "true" ]]; then
-        mysql -uaehven -pcypress --database arduino_home_develop < reset.sql
+        mysql -uaehven -pcypress --database arduino_home_development < reset.sql
       fi
       ;;
   esac
