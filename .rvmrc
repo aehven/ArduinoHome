@@ -1,0 +1,12 @@
+r=`grep "ruby.*'.*'" Gemfile | sed "s/ruby//" | sed "s/'//g" | sed "s/ //g"`
+g=`git rev-parse --abbrev-ref HEAD`
+
+rvm use $r
+gemsets=`rvm gemset list`
+
+if [[ $gemsets != *$g* ]]
+  then
+  rvm use $r@adevelop --create
+else
+  rvm use $r@a$g
+fi
