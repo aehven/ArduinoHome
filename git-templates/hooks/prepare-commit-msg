@@ -1,0 +1,17 @@
+#!/bin/bash
+
+shopt -s nocasematch
+BRANCH_NAME=`git rev-parse --abbrev-ref HEAD`
+
+if [[ $BRANCH_NAME =~ "issue" ]]; then
+  ISSUE_NUMBER=`echo $BRANCH_NAME | sed 's/issue//ig' | sed 's/#//g'`
+else
+  exec < /dev/tty #Allows us to read user input below, assigns stdin to keyboard
+  read -p "Issue number? " ISSUE_NUMBER
+fi
+
+if [[ "$ISSUE_NUMBER" != "" ]]; then
+  ISSUE_NAME=`echo "#$ISSUE_NUMBER: "`
+  sed -i "1s@^@${ISSUE_NAME}@" "$1"
+fi
+
